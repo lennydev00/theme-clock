@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  font-family: "Heebo", sans-serif;
+  background-color: var(--secondary-color);
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+}
+
+.time {
+  font-size: 60px;
+  color: var(--primary-color);
+}
+
+.date {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.circle {
+  height: 18px;
+  width: 18px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.hour-needle {
+  height: 65px;
+  width: 4px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 35px;
+  left: calc(50% - 2px);
+  transform-origin: bottom;
+}
+
+.minute-needle {
+  height: 100px;
+  width: 4px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2px);
+  transform-origin: bottom;
+}
+
+.seconds-needle {
+  height: 100px;
+  width: 4px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2px);
+  transform-origin: bottom;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 6px);
+  left: calc(50% - 6px);
+}
+.dot::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}/*# sourceMappingURL=style.css.map */
